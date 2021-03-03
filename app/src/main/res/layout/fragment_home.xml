@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--가게 홈 화면 레이아웃 파일-->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f0f0ee">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="?attr/actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="15dp"
+                android:background="#fcfcaa"
+                android:gravity="center"
+                android:text="자리 정보"
+                android:textSize="40sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="몇분 전 업데이트"
+                android:gravity="right"
+                android:padding="5dp"/>
+
+            //가게 정보
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#ffffff">
+
+                //부가기능
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/call"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginVertical="2dp"
+                        android:layout_weight="1"
+                        android:text="전화"
+                        app:backgroundTint="#d3d3d3" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginVertical="2dp"
+                        android:layout_weight="1"
+                        android:text="버튼"
+                        app:backgroundTint="#d3d3d3" />
+                </LinearLayout>
+                <TextView
+                    style="@style/line" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        app:srcCompat="@drawable/location"
+                        style="@style/image"/>
+                    <TextView
+                        android:text="경기 수원시 영통구 덕영대로 1699"
+                        style="@style/text" />
+                </LinearLayout>
+                <TextView
+                    style="@style/line" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        app:srcCompat="@drawable/clock"
+                        style="@style/image"/>
+                    <TextView
+                        android:text="매일 12:00 - 20:00, 일요일 휴무"
+                        style="@style/text"/>
+                </LinearLayout>
+                <TextView
+                    style="@style/line" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        app:srcCompat="@drawable/info"
+                        style="@style/image"/>
+                    <TextView
+                        android:text="주차, 포장, 무선 인터넷, 반려동물 동반, 지역화폐"
+                        style="@style/text"/>
+                </LinearLayout>
+                <TextView
+                    style="@style/line" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        app:srcCompat="@drawable/house"
+                        style="@style/image"/>
+                    <TextView
+                        android:text="https://www.naver.com/"
+                        android:linksClickable="true"
+                        android:autoLink="web"
+                        style="@style/text"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
