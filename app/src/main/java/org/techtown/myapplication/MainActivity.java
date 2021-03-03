@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         InputStream input = getResources().openRawResource(R.raw.cafe);
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new InputStreamReader(input, "EUC-KR"));
+            reader = new BufferedReader(new InputStreamReader(input,"EUC-KR"));
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
@@ -95,10 +95,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
             String arr[] = line.split(";");
             int id = Integer.parseInt(arr[0]);
-            double lat = Double.parseDouble(arr[3]);
-            double lon = Double.parseDouble(arr[4]);
 
-            Cafe cafe = new Cafe(id, arr[1],arr[2],lat, lon,arr[5],arr[6]);
+            Cafe cafe = new Cafe(id, arr[1],arr[2],arr[3], arr[4],arr[5]);
             hm.put(id,cafe);
         }
     }

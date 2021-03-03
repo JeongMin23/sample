@@ -24,7 +24,7 @@ public class CafeActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Cafe cafe = (Cafe) intent.getSerializableExtra("cafe");
 
-        fragmenthome = new FragmentHome();
+        fragmenthome = new FragmentHome(cafe);
         fragmentmenu = new FragmentMenu();
         reviewFragment = new ReviewFragment();
 

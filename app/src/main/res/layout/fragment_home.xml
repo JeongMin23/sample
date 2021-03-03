@@ -80,9 +80,11 @@
                     <ImageView
                         app:srcCompat="@drawable/location"
                         style="@style/image"/>
+
                     <TextView
-                        android:text="경기 수원시 영통구 덕영대로 1699"
-                        style="@style/text" />
+                        android:id="@+id/address"
+                        style="@style/text"
+                        android:text="주소" />
                 </LinearLayout>
                 <TextView
                     style="@style/line" />
@@ -107,7 +109,8 @@
                         app:srcCompat="@drawable/info"
                         style="@style/image"/>
                     <TextView
-                        android:text="주차, 포장, 무선 인터넷, 반려동물 동반, 지역화폐"
+                        android:id="@+id/etc"
+                        android:text="부가정보"
                         style="@style/text"/>
                 </LinearLayout>
                 <TextView
@@ -120,7 +123,8 @@
                         app:srcCompat="@drawable/house"
                         style="@style/image"/>
                     <TextView
-                        android:text="https://www.naver.com/"
+                        android:id="@+id/link"
+                        android:text="링크"
                         android:linksClickable="true"
                         android:autoLink="web"
                         style="@style/text"/>

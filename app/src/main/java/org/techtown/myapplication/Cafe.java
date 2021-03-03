@@ -12,19 +12,17 @@ import java.io.Serializable;
 public class Cafe implements Serializable {
 
     int id;
-    String  name;
+    String name;
     String tel;
-    double lat;
-    double lon;
+    String address;
     String etc;
     String link;
 
-    public Cafe(int id, String name, String tel, double lat, double lon, String etc, String link) {
+    public Cafe(int id, String name, String tel, String address, String etc, String link) {
         this.id = id;
         this.name = name;
         this.tel = tel;
-        this.lat = lat;
-        this.lon = lon;
+        this.address = address;
         this.etc = etc;
         this.link = link;
     }
@@ -53,20 +51,12 @@ public class Cafe implements Serializable {
         this.tel = tel;
     }
 
-    public double getLat() {
-        return lat;
+    public String getAddress() {
+        return address;
     }
 
-    public void setLat(double lat) {
-        this.lat = lat;
-    }
-
-    public double getLon() {
-        return lon;
-    }
-
-    public void setLon(double lon) {
-        this.lon = lon;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getEtc() {
@@ -88,7 +78,7 @@ public class Cafe implements Serializable {
     @NonNull
     @Override
     public String toString() {
-        return id +", "+name+", "+lat+", "+lon+", "+etc+", "+link ;
+        return id + ", " + name + ", " + address + ", " + etc + ", " + link;
     }
 
 }
